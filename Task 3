@@ -1,0 +1,25 @@
+import matplotlib.pyplot as plt
+
+teams = {
+    "Team A": 25,
+    "Team B": 32,
+    "Team C": 28,
+    "Team D": 21,
+    "Team E": 30,
+    "Team F": 24,
+    "Team G": 29,
+    "Team H": 22,
+    "Team I": 27,
+    "Team J": 31
+}
+
+labels = list(teams.keys())
+sizes = list(teams.values())
+
+# Побудова кругової діаграми
+plt.figure(figsize=(10, 8))
+plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140, colors=plt.cm.tab20.colors)
+
+plt.title('Percentage Distribution of Teams')
+
+plt.show()
