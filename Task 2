@@ -1,0 +1,19 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+years = np.array([2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022], dtype=int)
+life_expectancy_ukraine = np.array([68.2, 68.2, 68.0, 68.1, 68.2, 68.3, 69.2, 70.3, 70.8, 70.9, 71.2, 71.2, 71.2, 71.5, 71.8, 71.6, 71.8, 71.2, 69.6, 68.6])
+
+life_expectancy_mexico = np.array([74.3, 74.4, 74.4, 74.3, 74.2, 74.2, 74.1, 74.2, 74.4, 74.6, 74.7, 74.8, 74.7, 74.4, 74.1, 74.0, 74.2, 70.1, 70.2, 74.8])
+
+plt.plot(years, life_expectancy_ukraine, label='Ukraine', color='blue')
+plt.plot(years, life_expectancy_mexico, label='Mexico', color='green')
+
+plt.title('Life Expectancy in Ukraine and Mexico (2003-2022)', fontsize=15)
+plt.xlabel('Year', fontsize=12, color='red')
+plt.ylabel('Life Expectancy', fontsize=12, color='red')
+plt.xticks(years)
+plt.legend()
+plt.grid(True)
+
+plt.show()
